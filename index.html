@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet">
+  <title>CarDealerShip</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="output.css" rel="stylesheet" />
+</head>
+
+<body class="bg-violet-900 font-body">
+  <div class="max-w-[1440px] w-full mx-auto bg-[#000000]">
+    <div x-data="{navOpen: false, scrolledFromTop: false}"
+      x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+      @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" :class="{
+        'overflow-hidden': navOpen,
+        'overflow-scroll': !navOpen
+        }">
+      <header
+        class="fixed z-50 max-w-[1440px] py-3 mx-auto w-full bg-[#000000] flex justify-between items-center px-4 md:px-12 transition-all duration-200 h-24"
+        :class="{'h-24': !scrolledFromTop, 'h-24': scrolledFromTop}">
+        <a href="#">
+          <img src="img/1.svg" alt="ChitChat Logo"
+            class="lg:ml-[70px] mt-8 h-12 transform origin-left transition duration-200"
+            :class="{'scale-100': !scrolledFromTop, 'scale-75': scrolledFromTop}" />
+        </a>
+        <nav class="lg:mr-[75px] mt-8">
+          <button class="md:hidden" @click="navOpen = !navOpen">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <ul
+            class="fixed left-0 right-0 min-h-screen px-4 pt-8 space-y-4 bg-[#000000] text-white transform transition duration-300 translate-x-full md:relative md:flex md:space-x-10 md:min-h-0 md:px-0 md:py-0 md:space-y-0 md:translate-x-0"
+            :class="{'translate-x-full': !navOpen}" :class="{'translate-x-0': navOpen}">
+            <li class="">
+              <a href="#" @click="navOpen = false">Home</a>
+            </li>
+            <li class="">
+              <a href="#features" @click="navOpen = false">Cars</a>
+            </li>
+            <li>
+              <a href="#about" @click="navOpen = false">Book now</a>
+            </li>
+            <li>
+              <a href="#contact" @click="navOpen = false">Terms and conditions</a>
+            </li>
+            <li>
+              <a href="#str1" @click="navOpen = false" class="bg-[#EE8313] px-2 py-2">Manage Booking</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="pt-32 md:pt-60 text-white  bg-[#000000]">
+        <div class="container max-w-[1200px] mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 justify-center mx-auto">
+            <div class="mt-4">
+              <h1 class="pt-0 font-bold max-w-[474px] leading-tight text-4xl md:text-[52px] px-2">
+                The World's Best Luxury Car Deals
+              </h1>
+              <p class="pt-8 pb-14 max-w-[474px] px-2">
+                HKinvestor can provide rentals of the most exclusive cars like
+                Ferrari and Lamborghini.
+              </p>
+              <div class="inline-flex flex-wrap gap-6 px-3">
+                <a href="#" class="flex mx-auto"><button class="flex btn bg-[#EE8313] px-4 py-2">
+                    Buy Now
+                  </button></a>
+                <a href="#" class="flex mx-auto"><button
+                    class="flex btn border-2 border-[#EE8313] text-[#EE8313] font-semibold px-4 py-2">
+                    Video Introduction
+                  </button></a>
+              </div>
+              <p class="px-2 pt-16 font-semibold">
+                <span class="text-5xl">500+ </span>Luxury Car<span class="ml-4 text-3xl">
+                  #1</span>
+                Best Deal Car
+              </p>
+            </div>
+            <div class="">
+              <img src="./img/1.png"
+                class="flex justify-center mx-auto lg:max-w-[1200px] md:max-w-[768px] lg:-translate-x-40 z-0" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="features" class="max-w-[1440px] min-h-full  w-full mx-auto bg-[#000000]">
+        <div class="container max-w-[1200px] mx-auto">
+          <h2 class="mx-auto text-white text-center text-4xl md:text-[52px] py-12 px-1 font-bold">Rent a Luxury Car</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 justify-center mx-auto px-1 gap-7">
+            <img class="w-full h-full" src="./img/2.png" alt="" />
+            <img class="w-full h-full" src="./img/3.png" alt="" />
+            <img class="w-full h-full" src="./img/4.png" alt="" />
+            <img class="w-full h-full" src="./img/5.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="#" class="max-w-[1440px] py-8 lg:py-[50px] px-2 min-h-full w-full text-[#ffffff] mx-auto bg-[#000]">
+        <div class="container pt-8 max-w-[1200px] mx-auto">
+          <h2 class="text-4xl md:text-[52px] ml-2 pb-[70px] font-bold">Our Other Services</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 justify-center gap-4">
+            <div class="inline-block justify-center w-full">
+              <img src="img/6.png" class="w-full">
+              <h5 class="py-2 text-2xl font-bold">Private Charter</h5>
+              <p class="max-w-[384px] px-0">Pinjam Mobil Rent also offers you discreet and speedy, transfers via
+                helicopter or private planes.</p>
+            </div>
+            <div class="inline-block justify-center w-full">
+              <img src="img/7.png" class="w-full">
+              <h5 class="py-2 text-2xl font-bold">Chauffer Driven Car Rentals</h5>
+              <p class="max-w-[384px] px-0">Our chauffers are professional drivers who provide a discreet, reliable
+                punctual and professional service.</p>
+            </div>
+            <div class="inline-block justify-center w-full">
+              <img src="img/8.png" class="w-full">
+              <h5 class="py-2 text-2xl font-bold">Wedding Car Rentals</h5>
+              <p class="max-w-[384px] px-0">If you want to celebrate your wedding in style and elegance, choose one car
+                from our luxury collection.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="#" class="max-w-[1440px] py-0 px-2 min-h-full w-full mx-auto bg-[#000]">
+        <div class="container max-w-[1200px] mx-auto ">
+          <h2 class="text-4xl pb-8 text-center font-bold leading-tight mx-auto mt-6 md:text-[52px] max-w-[591px]">
+            Popular Destination for Car Rentals</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div><img src="img/9.png" class="w-full mx-auto"></div>
+            <div><img src="img/10.png" class="w-full mx-auto"></div>
+            <div><img src="img/11.png" class="w-full mx-auto"></div>
+            <div><img src="img/12.png" class="w-full mx-auto"></div>
+            <div><img src="img/13.png" class="w-full mx-auto"></div>
+            <div><img src="img/14.png" class="w-full mx-auto"></div>
+          </div>
+        </div>
+      </section>
+      <section id="#" class="max-w-[1440px] py-0  px-2 h-full w-full mx-auto bg-[#000]">
+        <div class="container max-w-[1200px w-full mx-auto ">
+          <h2 class="text-4xl pb-8 text-center font-bold ml-4 mt-4  md:text-[52px]">
+            Location</h2>
+          <img src="img/15.png" class="max-w-[1200px] w-full">
+        </div>
+      </section>
+      <section class="max-w-[1440px] py-0 md:py-20 px-2 min-h-full w-full mx-auto bg-[#000]">
+        <div class="container mx-auto max-w-[1200px]">
+          <div class="flex flex-wrap">
+            <div class="p-2 md:w-[46%] flex flex-col ">
+              <div class="flex items-center">
+                <img src="img/1.svg">
+                <h5 class="ml-4 font-semibold text-[#fff]">HKinvision</h5>
+              </div>
+              <p class="max-w-[235px] text-lg text-[#fff] py-12 md:py-16">The World's Best Luxury Car’s Dealing Platform
+              </p>
+            </div>
+            <div class="p-2 md:w-[54%] flex flex-col ">
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8">
+                <div class="grid justify-center gap-y-6">
+                  <h4>Company</h4>
+                  <p>About us</p>
+                  <p>Product</p>
+                  <p>Testimonial</p>
+                </div>
+                <div class="grid justify-center gap-y-6">
+                  <h4>Suport</h4>
+                  <p>About us</p>
+                  <p>Product</p>
+                  <p>Testimonial</p>
+                </div>
+                <div class="grid justify-center gap-y-6">
+                  <h4>Category</h4>
+                  <p>About us</p>
+                  <p>Product</p>
+                  <p>Testimonial</p>
+                </div>
+                <div>
+                  <div><img src="img/cdnlogo.com_facebook.svg" class="w-24 mt-2"></div>
+                  <div><img src="img/Instagram_logo.svg" class="w-20 py-12"></div>
+                  <div><img src="img/YouTube-White-Logo.wine.svg" class="w-20"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="py-3 bg-[#ee8313] text-center text-[#fff]">©2022 HKInvestor. All right reserved</p>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
